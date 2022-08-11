@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOKEPON</title>
-    <script src="./js/mokepon.js"></script>
   </head>
 
   <body>
@@ -24,16 +23,16 @@
         Langostelvis -> Agua y Fuego
         Tucapalma -> Agua y Tierra
         Pydos -> Tierra y Fuego-->
-      <button>Seleccionar</button>
+      <button id="botónMascota">Seleccionar</button>
     </section>
     <section id="seleccionarAtaque">
       <h2>Elige tu ataque:</h2>
       <p>Tu mascota tiene <span>3</span> vidas.</p>
       <p>La mascota del enemigo tiene <span>3</span> vidas.</p>
       <p>
-        <button>Fuego 🔥</button>
-        <button>Agua 💧</button>
-        <button>Tierra 🌱</button>
+        <button id="botónFuego">Fuego 🔥</button>
+        <button id="botónAgua">Agua 💧</button>
+        <button id="botónTierra">Tierra 🌱</button>
       </p>
     </section>
     <section id="mensajes">
@@ -42,7 +41,8 @@
       </p>
     </section>
     <section id="reiniciar">
-      <button>Reiniciar</button>
+      <button id="botónReiniciar">Reiniciar</button>
     </section>
+    <script src="./js/mokepon.js"></script>
   </body>
 </html>
