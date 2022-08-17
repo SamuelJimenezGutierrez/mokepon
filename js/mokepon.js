@@ -1,18 +1,25 @@
 function iniciarJuego() {
-  let botonMascotaJugador = document.getElementById("botónMascota");
+  let botonMascotaJugador;
+  botonMascotaJugador = document.getElementById("botónMascota");
   botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
 }
 
 function seleccionarMascotaJugador() {
   if (document.getElementById("ratigueya").checked == true) {
-    alert("Seleccionaste a ratigueya.");
+    variaciónMascotaJugadorHTML("Ratigueya");
   } else if (document.getElementById("hipodoge").checked == true) {
-    alert("Seleccionaste a hipodogue.");
+    variaciónMascotaJugadorHTML("Hipodoge");
   } else if (document.getElementById("capipepo").checked == true) {
-    alert("Seleccionaste a capipepo.");
+    variaciónMascotaJugadorHTML("Capipepo");
   } else {
     alert("Por favor, selecciona una mascota.");
   }
+}
+
+function variaciónMascotaJugadorHTML(nombreMascotaSeleccionadaTexto) {
+  let spanMascotaJugador = "";
+  spanMascotaJugador = document.getElementById("nombreMascotaJugador");
+  spanMascotaJugador.innerHTML = nombreMascotaSeleccionadaTexto;
 }
 
 window.addEventListener("load", iniciarJuego);
