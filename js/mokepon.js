@@ -5,16 +5,25 @@ function iniciarJuego() {
 }
 
 function seleccionarMascotaJugador() {
+  let mascotaSeleccionadaCheck;
   if (document.getElementById("ratigueya").checked == true) {
     variaciónMascotaJugadorHTML("Ratigueya");
+    mascotaSeleccionadaCheck = 1;
   } else if (document.getElementById("hipodoge").checked == true) {
     variaciónMascotaJugadorHTML("Hipodoge");
+    mascotaSeleccionadaCheck = 1;
   } else if (document.getElementById("capipepo").checked == true) {
     variaciónMascotaJugadorHTML("Capipepo");
+    mascotaSeleccionadaCheck = 1;
+  } else {
+    mascotaSeleccionadaCheck = 0;
+  }
+
+  if (mascotaSeleccionadaCheck == 1) {
+    seleccionarMascotaEnemigo();
   } else {
     alert("Por favor, selecciona una mascota.");
   }
-  seleccionarMascotaEnemigo();
 }
 
 function seleccionarMascotaEnemigo() {
